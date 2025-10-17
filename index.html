@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Profil — Imanuel Paulus Rizki Lombok</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Profil mahasiswa — Imanuel Paulus Rizki Lombok. CV singkat, kontak, dan portfolio tugas." />
+  <style>
+    /* Reset + base */
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#60a5fa; --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,var(--bg) 0%, #071028 100%); color:#e6eef8; -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale; padding:32px;
+    }
+    .container{max-width:980px;margin:0 auto}
+
+    /* Card */
+    .card{background:linear-gradient(180deg,var(--card), rgba(8,12,18,0.6)); border-radius:14px; padding:28px; box-shadow:0 10px 30px rgba(2,6,23,0.6);}
+
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{width:110px;height:110px;border-radius:16px;flex:0 0 110px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#111}
+    .avatar img{width:100%;height:100%;object-fit:cover;border-radius:16px}
+    h1{margin:0;font-size:22px}
+    .subtitle{color:var(--muted);margin-top:6px;font-size:14px}
+
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:22px;margin-top:20px}
+    .panel{background:var(--glass);border-radius:10px;padding:16px}
+
+    /* contact list */
+    .contact-list{display:flex;flex-direction:column;gap:10px}
+    .contact-item{display:flex;gap:10px;align-items:center}
+    .chip{padding:8px 12px;background:var(--glass-2);border-radius:999px;font-size:13px}
+
+    /* about */
+    .about{line-height:1.6;color:#d9e6f7}
+    .meta{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+    .meta .m{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:8px;color:var(--muted);font-size:13px}
+
+    /* sections */
+    .section{margin-top:18px}
+    .section h2{font-size:16px;margin:0 0 10px 0}
+    .skill-list{display:flex;gap:8px;flex-wrap:wrap}
+    .skill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:8px;font-size:13px}
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* responsive */
+    @media (max-width:880px){
+      .grid{grid-template-columns:1fr;}
+      .avatar{width:88px;height:88px}
+    }
+
+    /* small util */
+    a {color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#7c3aed);color:#062034;font-weight:600}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <header>
+        <div class="avatar" aria-hidden="true">
+          <img src="foto-profil.jpg" alt="Foto Profil Imanuel" />
+        </div>
+        <div style="flex:1">
+          <h1>Imanuel P. R. Lombok</h1>
+          <div class="subtitle">Mahasiswa Jurusan Kimia — Universitas (NIM: 241011010036)</div>
+          <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+            <span class="chip">Kumelembuai, 18 oktober 2005</span>
+            <span class="chip">Kumelembuai, minahasa selatan</span>
+            <span class="chip">Kristen Protestan</span>
+          </div>
+        </div>
+        <div style="text-align:right">
+          <a class="btn" href="#Contact">Contact</a>
+        </div>
+      </header>
+
+      <div class="grid">
+        <main>
+          <section class="panel about">
+            <h2>About Me</h2>
+            <p>Saya, Imanuel (eL), adalah mahasiswa jurusan Kimia yang lahir di kumelembuai, 18 oktober 2005 dan berasal dari Kumelembuai Atas, kecamatan Kumelembuai, Kabupaten Minahasa Selatan. </p>
+
+            <div class="meta">
+              <div class="m">Bidang minat: Analitik, Anorganik, Organik</div>
+              <div class="m">Hobi: Badminton, Voli</div>
+            </div>
+          </section>
+
+          <section>
+    <h2>Makalah Saya</h2>
+    <p>
+      Berikut ini adalah makalah saya yang berjudul 
+      <strong>“Senyawa Formalin.”</strong>  
+      Kamu dapat membaca langsung di bawah ini atau mengunduhnya.
+    </p>
+
+    <!-- Menampilkan file PDF langsung -->
+    <iframe src="Makalah-Imanuel.pdf"></iframe>
+
+    <!-- Tombol download -->
+    <a href="Makalah-Imanuel.pdf" class="button" download>📄 Unduh Makalah (PDF)</a>
+  </section>
+
+        </main>
+
+        <aside>
+          <div class="panel">
+            <h2>Kontak</h2>
+            <div class="contact-list" id="Contact">
+              <div class="contact-item"><strong>Email:</strong>&nbsp;<a href="mailto:imanuellombok@gmail.com">imanuellombok@gmail.com</a></div>
+              <div class="contact-item"><strong>Instagram:</strong>&nbsp;<a href="https://instagram.com/imanuellombok" target="_blank" rel="noreferrer">@imanuellombok</a></div>
+              <div class="contact-item"><strong>Facebook:</strong>&nbsp;<a href="https://facebook.com/ImanuelL" target="_blank" rel="noreferrer">Imanuel Lombok</a></div>
+            </div>
+
+            <div style="margin-top:12px">
+             
+            </div>
+          </div>
+          
+          </div>
+        </aside>
+      </div>
+
+      <footer>
+        © 2025 Dibuat oleh Imanuel P. R. Lombok
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    // Simple enhancement: if page opened on small device, scroll to contact when hash used
+    if(location.hash === '#kontak'){
+      document.getElementById('kontak')?.scrollIntoView({behavior:'smooth'});
+    }
+  </script>
+</body>
+</html>
